@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Parcel Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Parcel Tracker</h1>
+        <p>.◕‿◕. Track and manage your parcels .◕‿◕. </p>
+    </header>
+
+    <main>
+
+        <!-- Add Parcel Form -->
+        <section class="form-section">
+
+            <h2>Add New Parcel</h2>
+            <form id="parcelForm">
+                <input type="text" id="trackingNumber" placeholder="Tracking Number" required>
+
+                <input type="text" id="recipient" placeholder="Recipient" required>
+
+                <select id="carrier" required>
+                    <option value="">Select Carrier</option>
+                    <option value="Kerry Express">Kerry Express</option>
+                    <option value="Flash Express">Flash Express</option>
+                    <option value="J&T Express">J&T Express</option>
+                    <option value="Thailand Post">Thailand Post</option>
+                </select>
+
+                <select id="status" required>
+                    <option value="">Select Status</option>
+                    <option value="Preparing">Preparing</option>
+                    <option value="In Transit">In Transit</option>
+                    <option value="Out for Delivery">Out for Delivery</option>
+                    <option value="Delivered">Delivered</option>
+                    <option value="Cancelled">Cancelled</option>
+                </select>
+
+                <select id="category" required>
+                    <option value="">Select Category</option>
+                    <option value="Document">Document</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Food">Food</option>
+                    <option value="Cosmetics">Cosmetics</option>
+                    <option value="Books">Books</option>
+                    <option value="Household">Household Items</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <button type="submit">
+                    + Add Parcel
+                </button>
+
+            </form>
+
+        </section>
+
+        <section class="filter-section">
+
+            <h2>My Parcels</h2>
+
+            <select id="statusFilter">
+                <option value="">All Status</option>
+                <option value="Preparing">Preparing</option>
+                <option value="In Transit">In Transit</option>
+                <option value="Out for Delivery">Out for Delivery</option>
+                <option value="Delivered">Delivered</option>
+                <option value="Cancelled">Cancelled</option>
+            </select>
+
+        </section>
+
+
+        <section>
+
+            <div id="parcelList"></div>
+
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
